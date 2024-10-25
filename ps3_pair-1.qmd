@@ -1,6 +1,6 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Lauren Laine"
+author: "Lauren Laine & Ella Montgomery"
 format: 
   pdf:
     keep-tex: true
