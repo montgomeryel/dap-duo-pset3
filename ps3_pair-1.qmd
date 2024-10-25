@@ -1,5 +1,6 @@
 ---
 title: "30538 Problem Set 3: git pair"
+
 author: "Lauren Laine & Ella Montgomery"
 format: 
   pdf:
@@ -26,10 +27,13 @@ np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
 def preview_data(df):
-    first=print(df.head())
-    second= df.describe()
-    return (first, second)
-
+    head=print(df.head())
+    describe= df.describe()
+    histogram = alt.Chart(df).mark_bar().encode(
+        alt.X('Random Numbers', bin=True),
+        alt.Y('count()')
+    )
+    return (head, describe, histogram)
 
 preview_data(data)
 ```
